@@ -12,7 +12,7 @@
 *.obj
 Taller4
 
-libs/BinaryFileHandler.h
+
 
 *.dSYM
 *.bin
