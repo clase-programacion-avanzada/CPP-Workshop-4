@@ -15,6 +15,7 @@ int main() {
 
     int option = 0;
     List<Product> products;
+    string textFileName = "productos.txt";
 
     do {
         cout << "Ingrese una opción: ";
