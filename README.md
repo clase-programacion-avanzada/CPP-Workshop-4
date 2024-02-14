@@ -32,7 +32,7 @@ La recomendación es que debe tener los siguientes headers:
 -`List.h`: Este archivo header es el que se ha usado en los demás talleres.
 
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
-0. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo BinariFileHandler.h
+0. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo [BinariFileHandler.h]()
 1. **Leer archivo de texto y crear un archivo binario a partir de este:** debe leer el archivo de texto y crear un archivo binario a partir de la lista de productos (`List<Product>`).(1.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Product>`.<br />
     Debe crear un archivo binario que contenga la información de la lista de productos (Recuerde que en el archivo binario debe guardar elementos de tipo `ProductBinary`)
