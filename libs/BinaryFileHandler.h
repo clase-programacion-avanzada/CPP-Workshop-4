@@ -48,6 +48,19 @@ struct BinaryFileHandler {
 
         fstream file;
 
+        file.open(fileName, ios::in | ios::binary);
+
+        if (file.fail()) {
+            return T();
+        }
+
+        file.seekg(index * sizeof(T), ios::beg);
+
+        T element;
+
+        file.read(reinterpret_cast<char *>(&element), sizeof(T));
+
+        file.close();
 
         return element;
     }
