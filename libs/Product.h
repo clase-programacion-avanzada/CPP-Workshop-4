@@ -15,6 +15,7 @@ struct Product {
   double price;
 };
 
+//structure to store the product in a binary file
 struct ProductBinary {
 
 };

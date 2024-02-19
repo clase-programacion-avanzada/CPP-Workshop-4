@@ -16,6 +16,8 @@ int main() {
     int option = 0;
     List<Product> products;
     string textFileName = "productos.txt";
+    string binaryFileName = "productos.bin";
+
 
     do {
         cout << "Ingrese una opción: ";

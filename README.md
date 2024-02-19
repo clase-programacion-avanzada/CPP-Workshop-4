@@ -32,7 +32,7 @@ La recomendación es que debe tener los siguientes headers:
 -`List.h`: Este archivo header es el que se ha usado en los demás talleres.
 
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
-1. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo [BinariFileHandler.h]()
+1. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo [BinariFileHandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-4/blob/main/libs/BinaryFileHandler.h)
    
 2. **Leer archivo de texto y crear un archivo binario a partir de este:** debe leer el archivo de texto y crear un archivo binario a partir de la lista de productos (`List<Product>`).(1.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Product>`.<br />
@@ -45,12 +45,12 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
 5. **Eliminar producto del archivo binario:** debe eliminar un producto de la lista de productos y actualizar el archivo binario. (1.0)<br /><br />
     
 6. **Buscar un producto:** 
-   1. Desarrolle una función que reciba como parámetros dos cadenas de caracteres que cada una representa una fecha en formato «dd/mm/yyyy» y que retorne true si la primera fecha es mayor o igual que la segunda fecha. (0.5) 
+   1. Desarrolle una [función](https://github.com/clase-programacion-avanzada/CPP-Workshop-4/blob/main/libs/Product.h#L22) que reciba como parámetros dos cadenas de caracteres que cada una representa una fecha en formato «dd/mm/yyyy» y que retorne true si la primera fecha es mayor o igual que la segunda fecha. (0.5) 
    El prototipo de la función es:
       ```cpp
         bool dateIsGreaterOrEqual(string date1,string date2);
       ```
-   2. Desarrolle una función que reciba como parámetro una fecha en formato «dd/mm/yyyy» y un nombre de producto, y que retorne una lista con todos aquellos productos del archivo productos.dat cuyo nombre del producto contenga el nombre del producto recibido como parámetro y cuya fecha de vigencia de la promoción sea mayor o igual a la fecha recibida como parámetro.(0.5)
+   2. Desarrolle una [función](https://github.com/clase-programacion-avanzada/CPP-Workshop-4/blob/main/libs/Product.h#L28) que reciba como parámetro una fecha en formato «dd/mm/yyyy» y un nombre de producto, y que retorne una lista con todos aquellos productos del archivo productos.dat cuyo nombre del producto contenga el nombre del producto recibido como parámetro y cuya fecha de vigencia de la promoción sea mayor o igual a la fecha recibida como parámetro.(0.5)
       ```cpp
         List<Product> searchProducts(string date, string name);
       ``` 
