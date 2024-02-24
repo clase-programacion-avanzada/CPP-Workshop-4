@@ -37,6 +37,12 @@ struct List {
         return elements[index];
     }
 
+    T set(int index, T element) {
+        T oldElement = elements[index];
+        elements[index] = element;
+        return oldElement;
+    }
+
     bool contains(T element) {
         for (int i = 0; i < size; i++) {
             if (elements[i] == element) {
