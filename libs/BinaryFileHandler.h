@@ -38,6 +38,17 @@ struct BinaryFileHandler {
         
         fstream file;
 
+    
+        file.open(fileName, ios::out | ios::binary | ios::app);
+    
+        // If the file failed to open, return false.
+        if (file.fail()) {
+            return false;
+        }   
+            
+        file.write((char*)&T, sizeof(element));
+    
+        file.close();
 
         return true;
     }

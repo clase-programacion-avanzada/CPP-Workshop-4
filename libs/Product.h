@@ -17,11 +17,18 @@ struct Product {
 
 //structure to store the product in a binary file
 struct ProductBinary {
-
+  char storeName[50];
+  char storeUrl
 };
 
 bool dateIsGreaterOrEqual(string date1,string date2) {
     //TODO: Implement this function, maybe you will need split function.
+    //nombre;appellido;123
+    string toSplit = "nombre;appellido;123";
+    List<string> tokens = split(toSplit, ';');
+    //["nombre","appellido", "123"]
+    
+    
     return false; 
 }
 
