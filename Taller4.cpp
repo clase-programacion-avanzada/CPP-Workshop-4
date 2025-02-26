@@ -13,20 +13,32 @@ int main() {
     
     printMenu();
 
+
     int option = 0;
+    
     List<Product> products;
     string textFileName = "productos.txt";
     string binaryFileName = "productos.bin";
+    TextFileHandler textFileHandler(textFileName);
+    BinaryFileHandler<ProductBinary> binaryFileHandler(binaryFileName);
+    List<string> lines;
 
 
     do {
-        cout << "Ingrese una opción: ";
-        cin >> option;
+        //cout << "Ingrese una opción: ";
+        //cin >> option;
+        option = 1;
 
        switch (option)
         {
             case 1:
-                cout << "Opción 1" << endl;
+                cout << "Leyendo desde el archivo de texto..." << endl;
+                lines = textFileHandler.readLines();
+                //Convertir de string a Product
+                products = toProductList(lines);
+                //binaryFileHandler.writeBinaryFile(toProductBinaryList(products));
+                //writeBinaryFile(products, binaryFileName);
+
                 break;
             case 2:
                 cout << "Opción 2" << endl;
@@ -47,6 +59,12 @@ int main() {
                 cout << "Opción inválida" << endl;
                 break;
         } 
+
+        option++;
+
+        if (option == 6) {
+            option = 0;
+        }
 
     } while (option != 0);
     

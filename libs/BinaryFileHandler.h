@@ -4,6 +4,7 @@
 #include "List.h"
 #include <string>
 #include <fstream>
+#include "Product.h"
 
 using namespace std;
 
@@ -20,6 +21,18 @@ struct BinaryFileHandler {
 
         fstream file;
 
+        file.open(fileName, ios::out | ios::binary);
+
+        if (file.fail()) {
+            return false;
+        }
+
+        for (int i = 0; i < list.size; i++) {
+            file.write((char*)&list.get(i), sizeof(T));
+        }
+
+        file.close();
+        
         return true;
     }
 
@@ -29,7 +42,17 @@ struct BinaryFileHandler {
 
         fstream file;
        
+        file.open(fileName, ios::in | ios::binary);
 
+        if (file.fail()) {
+            return list;
+        }
+
+        T element;
+
+        while (file.read(reinterpret_cast<char *>(&element), sizeof(T))) {
+            list.add(element);
+        }
 
         return list;
     }
@@ -46,7 +69,7 @@ struct BinaryFileHandler {
             return false;
         }   
             
-        file.write((char*)&T, sizeof(element));
+        file.write((char*)&element, sizeof(T));
     
         file.close();
 
@@ -107,5 +130,46 @@ struct BinaryFileHandler {
         return fileSize;
     }
 };
+
+bool writeBinaryFile(List<Product> list, string fileName) {
+
+    fstream file;
+
+    file.open(fileName, ios::out | ios::binary);
+
+    if (file.fail()) {
+        return false;
+    }
+
+    for (int i = 0; i < list.size; i++) {
+        ProductBinary productBinary = toProductBinary(list.get(i));
+        file.write((char*)&productBinary, sizeof(ProductBinary));
+    }
+
+    file.close();
+
+    return true;
+}
+
+List<Product> readBinaryFile(string fileName) {
+
+    List<Product> list;
+
+    fstream file;
+   
+    file.open(fileName, ios::in | ios::binary);
+
+    if (file.fail()) {
+        return list;
+    }
+
+    ProductBinary ProductBinary;
+
+    while (file.read(reinterpret_cast<char *>(&ProductBinary), sizeof(ProductBinary))) {
+        list.add(toProduct(ProductBinary));
+    }
+
+    return list;
+}
 
 #endif /* MYHEADER_H */
