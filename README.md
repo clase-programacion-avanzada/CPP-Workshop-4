@@ -32,7 +32,7 @@ La recomendación es que debe tener los siguientes headers:
 -`List.h`: Este archivo header es el que se ha usado en los demás talleres.
 
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
-1. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo [BinariFileHandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-4/blob/main/libs/BinaryFileHandler.h)
+1. **Antes de comenzar** es necesario que complete la estructura BinaryFileHandler, dentro del archivo [BinaryFileHandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-4/blob/main/libs/BinaryFileHandler.h)
    
 2. **Leer archivo de texto y crear un archivo binario a partir de este:** debe leer el archivo de texto y crear un archivo binario a partir de la lista de productos (`List<Product>`).(1.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Product>`.<br />
